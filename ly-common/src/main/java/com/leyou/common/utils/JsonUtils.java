@@ -18,9 +18,11 @@ public class JsonUtils {
 
     //修改bug
     public static String toString(Object obj) {
+        System.out.println("toString 1.0分支代码");
         if (obj == null) {
             return null;
         }
+        System.out.println("1.0分支验证冲突");
         if (obj.getClass() == String.class) {
             return (String) obj;
         }
