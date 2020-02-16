@@ -18,6 +18,8 @@ public class JsonUtils {
 
     //修改bug
     public static String toString(Object obj) {
+        System.out.println("toString 主分支代码");
+
         if (obj == null) {
             return null;
         }
