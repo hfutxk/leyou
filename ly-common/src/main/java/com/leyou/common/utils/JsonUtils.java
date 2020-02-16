@@ -23,6 +23,7 @@ public class JsonUtils {
         if (obj == null) {
             return null;
         }
+        System.out.println("1.0分支验证冲突");
         if (obj.getClass() == String.class) {
             return (String) obj;
         }
