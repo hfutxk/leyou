@@ -10,16 +10,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author: HuYi.Zhang
- * @create: 2018-04-24 17:20
- **/
 public class JsonUtils {
 
     public static final ObjectMapper mapper = new ObjectMapper();
 
     private static final Logger logger = LoggerFactory.getLogger(JsonUtils.class);
 
+    //修改bug
     public static String toString(Object obj) {
         if (obj == null) {
             return null;
