@@ -14,8 +14,8 @@ import java.security.PublicKey;
  */
 public class JwtUtilsTest {
 
-    private static final String publicKeyPath = "/Users/bystander/rsa.pub";
-    private static final String privateKeyPath = "/Users/bystander/rsa.pri";
+    private static final String publicKeyPath = "D:\\xiakang\\workspace\\leyou\\rsa.pub";
+    private static final String privateKeyPath = "D:\\xiakang\\workspace\\leyou\\rsa.pri";
 
     private PrivateKey privateKey;
     private PublicKey publicKey;
@@ -42,7 +42,7 @@ public class JwtUtilsTest {
 
     @org.junit.Test
     public void parseToken() {
-        String token = "eyJhbGciOiJSUzI1NiJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoiSmFjayIsImV4cCI6MTUzODM2OTM3N30.Vi7UJrwMu0BOHMQoSSLefzGU1ir5LG-drcvAHPjMMMBzQz1oASjoDsiuw3h0bqVUUWXjdNcpybCWVuZ8UvOXOr-Jecqjz3NF_ZDfgessRGsijIIbju0qak6Zfm09jsjnHFTZ2munFJdM0I0RsiafQtkJSiLji7QXlvjCquKJUkg";
+        String token = "eyJhbGciOiJSUzI1NiJ9.eyJpZCI6MjAsInVzZXJuYW1lIjoiSmFjayIsImV4cCI6MTU4MTg1ODQwMX0.jCe_XhKSoWOkPlbhj5lD9p0tQQzevBRndy56jYVny4rJMQ2H4dA5NLy_F4ktFvNRjjxWyqH7rMz5hno42Hzx7o_d-9wJmaulXcSahVcwuP6wtBSGwdHZDIKJ0mwRnkj-tJVlHwRdUgvE3u5kiDEWIX3sgX-69qEEaNr7MErEF6s";
         UserInfo userInfo = JwtUtils.getUserInfo(publicKey, token);
         System.out.println("id:" + userInfo.getId());
         System.out.println("name:" + userInfo.getName());

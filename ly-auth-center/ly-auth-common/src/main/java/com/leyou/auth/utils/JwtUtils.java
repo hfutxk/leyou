@@ -7,6 +7,7 @@ import org.joda.time.DateTime;
 import java.security.PrivateKey;
 import java.security.PublicKey;
 
+
 /**
  * @author bystander
  * @date 2018/10/1
@@ -77,6 +78,8 @@ public class JwtUtils {
     public static UserInfo getUserInfo(PublicKey publicKey, String token) {
         Jws<Claims> claimsJws = parseToken(publicKey, token);
         Claims body = claimsJws.getBody();
+        System.out.println(claimsJws.getHeader().getAlgorithm());
+        System.out.println(claimsJws.getHeader().getType());
         return new UserInfo(
                 ObjectUtils.toLong(body.get(JwtConstants.JWT_KEY_ID)),
                 ObjectUtils.toString(body.get(JwtConstants.JWT_KEY_USER_NAME))
